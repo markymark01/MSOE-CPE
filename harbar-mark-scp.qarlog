@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	C:/CPE 1510/harbar-mark-scp.qarlog
+
+Archive:	C:/CPE 1510/harbar-mark-scp.qar
+Date:		Fri Mar 27 11:38:43 2026
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/CPE 1510/DECODE.bdf
+C:/CPE 1510/EXECUTE.bdf
+C:/CPE 1510/Fetch.bdf
+C:/CPE 1510/SCP.qpf
+C:/CPE 1510/SCP.qsf
+C:/CPE 1510/TOPLEVELDESIGN.bdf
+C:/CPE 1510/WaveformTesting.vwf
+C:/CPE 1510/components/adder.vhd
+C:/CPE 1510/components/alu.vhd
+C:/CPE 1510/components/busmux4to1.vhd
+C:/CPE 1510/components/control.vhd
+C:/CPE 1510/components/cpsr.vhd
+C:/CPE 1510/components/dmem.vhd
+C:/CPE 1510/components/extender.vhd
+C:/CPE 1510/components/irom.vhd
+C:/CPE 1510/components/reg32.vhd
+C:/CPE 1510/components/regfile.vhd
+C:/CPE 1510/components/rotator.vhd
+C:/CPE 1510/components/shifter.vhd
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

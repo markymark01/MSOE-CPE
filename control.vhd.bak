@@ -1,0 +1,123 @@
+-- ***************************************************************************
+-- Project:		CPE1510 Single-cycle Processor		
+-- Filename:	control.vhd
+-- Author:		<< insert your name here >> 
+-- Date:			<< insert the creation date here >>
+-- Provides:	
+-- - A control circuit for the ARMv4 ISA single-cycle processor.
+-- - Use when-else to create equations for each signal.
+-- ***************************************************************************
+-- The following instructions must be implemented in all appropriate modes:
+-- - Arithmetic: add, adds, cmp, cmn, rsb, rsbs, sub, subs 
+-- - Bitwise logic: and, ands, asl, asls, asr, asrs, bic, bics, 
+--		    eor, eors, lsl, lsls, lsr, lsrs, orr, ors
+-- - Moves: mov, movs, mvn, mvns
+-- - Load-store: ldr, str (offset indexing, + or - offset)  
+-- - Conditional branch: beq, bne
+-- - Unconditional branch:bal, bl 
+-- ***************************************************************************
+-- The following instructions are optional but make a more complete uproc 
+-- - Conditional branch: 		bge: pc <- braddr if 	not (N xor V) 
+-- - Conditional branch: 		blt: pc <- braddr if 	N xor V 
+-- - Conditional branch: 		bgt: pc <- braddr if 	not Z and not (N xor V)
+-- - Conditional branch: 		ble: pc <- braddr if 	Z or (N xor V) 
+-- ***************************************************************************
+
+-- use library packages 
+-- std_logic_1164: 9-valued logic signal voltages 
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- functional block symbol
+-- inputs
+--    IBUS:	 	the 32-bit machine code instruction 
+--    C,V,N,Z:	the condition code flag signals from the CPSR
+-- outputs 
+--    PCSEL:   0 = ground				1 = WD4 (for mov PC, LR) 
+--					2 = BRADDR				3 = PC+4
+--    A3SEL:   0 = Rs					1 = Rd 
+--    ROTSEL:  0 = ROTATE field		1 = constant 0
+--    SHAMTSEL:0 = SHAMT field		1 = R[RS] - lower five bits
+--    SRC2SEL: 0 = SHIFTED RM	    	1 = immediate
+--    REGWR:   0 = Regfile Write    1 = Regfile does not write 
+--    ALUSEL:  0 = AND              1 = EOR
+--             2 = SUB              3 = RSB
+--             4 = ADD              C = ORR
+--             D = MOV/SHIFTS       E = BIC
+--	       F = MVN
+--    CSPRWR:  0 = sample CVNZ      1 = sample CNZ		
+--	       2 = sample NZ	    3 = hold, do not sample
+--    MEMWR:   0 = Mem Write (STR)  1 = not an STR
+--    MEMRD:   0 = Mem Read (LDR)   1 = not an LDR
+--    WD4SEL:  0 = Data Mem Value   1 = ALU Value		
+--	       2 = PC+4 (BL)	    3 = ground
+--    A4SEL:   0 = rd		    1 = constant 14: LR
+
+entity CONTROL is 
+port(IBUS:     in  std_logic_vector(31 downto 0);
+     C,V,N,Z:  in  std_logic;
+     PCSEL:    out std_logic_vector(1 downto 0); 
+     A3SEL:    out std_logic; 
+     ROTSEL:   <<complete>>; 
+     SHAMTSEL: <<complete>>;
+     SRC2SEL:  <<complete>>;
+     REGWR:    <<complete>>;
+     ALUSEL:   out <<complete>>;
+     CPSRWR:   out <<complete>>; 
+     MEMWR:    <<complete>>;
+     MEMRD:    <<complete>>;
+     WD4SEL:   <<complete>>;
+     A4SEL:		out std_logic);
+end entity CONTROL;
+
+-- circuit description 
+architecture DATAFLOW of CONTROL is 
+   -- declare signals for the IBUS bit fields 
+   -- data processing: fields used for implementing arithmetic  
+   signal COND : std_logic_vector(3 downto 0);
+   signal OPCODE: std_logic_vector(1 downto 0);
+   signal I: std_logic;
+   signal CMD: std_logic_vector(3 downto 0);
+   signal S: <<complete>>;
+   -- load-store: fields used to implement load-store
+   signal IBAR: <<complete>>;
+   signal PUBWL: std_logic_vector(4 downto 0);
+   signal L: <<complete>>;
+   -- branch: fields used to help implement branches and MOV PC,LR
+   signal BL: <<complete>>; -- the branch L bit is a different bit than memory L
+   signal RD: std_logic_vector(3 downto 0);
+	signal RM: <<complete>>; 
+	signal BIT4: std_logic;
+	
+begin
+
+   -- assign IBUS bits to internal signals 
+   COND <= IBUS(31 downto 28);
+   OPCODE <= IBUS(27 downto 26);
+   I <= IBUS(25);
+   CMD <= <<complete>>;
+   S <= <<complete>>;
+   IBAR <= <<complete>>;
+   PUBWL <= <<complete>>;
+   L <= <<complete>> ; -- memory instruction L bit
+   BL <= IBUS(24) ; -- branch instruction L bit
+   RD <= IBUS(15 downto 12); -- destination register
+	RM <= <<complete>>; 
+	BIT4 <= IBUS(4); -- convenience for writing equations
+	
+   -- write output equations using when-else syntax 
+   -- include rows from data processing, load-store, and branch truth tables
+   PCSEL <= B"10" when COND=X"1" and OPCODE=B"10" and BL='0' and Z=<<complete>> else -- bne taking branch
+            B"10" when COND=X"0" and OPCODE=B"10" and BL='0' and Z=<<complete>> else -- beq taking branch
+	    B"10" when COND=X"E" and <<complete>> else -- branch always 
+            B"10" when COND=X"E" and OPCODE=B"10" and BL=<<complete>> else -- branch link 
+	    B"01" when COND=X"E" and OPCODE=B"00" and CMD=X"D" and RD=<<complete>> and 
+                  RM=<<complete>> else -- mov pc,lr
+	    B"11"; -- PC+4 for all other instructions 
+
+   A3SEL <= '1' when COND=X"E" and OPCODE=<<complete>> and L=<<complete>> else -- str
+            '0'; -- all other instructions
+   
+   <<complete when-else statements for all other control signals>>  
+				 
+end architecture DATAFLOW;

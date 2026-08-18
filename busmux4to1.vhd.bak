@@ -1,0 +1,29 @@
+-- *********************************************************************
+-- Project:	CPE1510 Single-cycle Processor		
+-- Filename:	busmux4to1.vhd
+-- Author:	<< insert your name here >> 
+-- Date:	<< insert creation date here>>
+-- Provides:	
+-- - a multiplexer that passes one of the selected busses to the output
+-- - uses with-select syntax to implement the multiplexer
+-- *********************************************************************
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity busmux4to1 is 
+port( D3, D2, D1, D0: in std_logic_vector(31 downto 0);
+      S: in <<complete>>;
+      Y: out <<complete>>);
+end entity busmux4to1; 
+
+architecture multiplexer of busmux4to1 is 
+begin 
+
+ with S select 
+ Y <= D3 when B"11", 
+      <<complete>>, 
+      <<complete>>, 
+      D0 when others;
+		
+end architecture multiplexer;
