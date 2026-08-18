@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/CPE 1510LAB3/harbar-mark-LAB3DIGIPUP.qarlog
+
+Archive:	C:/CPE 1510LAB3/harbar-mark-LAB3DIGIPUP.qar
+Date:		Wed May 06 15:33:23 2026
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/CPE 1510LAB3/Fetch.bdf
+C:/CPE 1510LAB3/LAB3.qpf
+C:/CPE 1510LAB3/LAB3.qsf
+C:/CPE 1510LAB3/SYSTEM.bdf
+C:/CPE 1510LAB3/TOPLEVELDESIGN.bdf
+C:/CPE 1510LAB3/components/adder.vhd
+C:/CPE 1510LAB3/components/addressdecoder.vhd
+C:/CPE 1510LAB3/components/alu.vhd
+C:/CPE 1510LAB3/components/busmux4to1.vhd
+C:/CPE 1510LAB3/components/control.vhd
+C:/CPE 1510LAB3/components/cpsr.vhd
+C:/CPE 1510LAB3/components/dmem.vhd
+C:/CPE 1510LAB3/components/extender.vhd
+C:/CPE 1510LAB3/components/irom.vhd
+C:/CPE 1510LAB3/components/reg32.vhd
+C:/CPE 1510LAB3/components/regfile.vhd
+C:/CPE 1510LAB3/components/regn.vhd
+C:/CPE 1510LAB3/components/rotator.vhd
+C:/CPE 1510LAB3/components/seg7decode.vhd
+C:/CPE 1510LAB3/components/shifter.vhd
+C:/CPE 1510LAB3/decode.bdf
+C:/CPE 1510LAB3/execute.bdf
+C:/CPE 1510LAB3/synchronizer.bdf
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,8 +1,8 @@
 -- ***************************************************************************
--- Project:		LAB2			
+-- Project:		DIGIBOTPUP			
 -- Filename:	control.vhd
 -- Author:		Mark Harbar
--- Date:			 05/05/2026
+-- Date:			03/18/2026
 -- Provides:	
 -- - A control circuit for the ARMv4 ISA single-cycle processor.
 -- - Use when-else to create equations for each signal.
@@ -124,6 +124,7 @@ begin
 				'1' when OPCODE=B"10" and BL='1' else 					--b/c b writes to lr
             '0';
    
+	--messed these up and the lsl was broken like very
 	
    -- choose rotated immediate or not
    ROTSEL <= '0' when OPCODE=B"00" and I='1' else

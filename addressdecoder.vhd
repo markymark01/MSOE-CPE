@@ -1,8 +1,8 @@
 -- ***********************************************************************
--- * Project:	   LAB2
+-- * Project:	   DIGIBOTPUP	
 -- * Filename:	   addressdecoder.vhd
 -- * Author:	   Mark Harbar
--- * Date:	   MSOE Spring Semester 2026 05/05/2026
+-- * Date:	   04/29/2026
 -- * Provides:	   a system level address decoder for the CPE1510 computer
 -- ***********************************************************************
 

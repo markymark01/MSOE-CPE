@@ -1,8 +1,8 @@
 -- ***********************************************************************
--- Project:	LAB2			
+-- Project:	DIGIBOTPUP			
 -- Filename:	extender.vhd
 -- Author:	Mark Harbar
--- Date:	 05/05/2026
+-- Date:	03/18/2026
 -- Provides:	
 -- - A selection signal chooses among three immediate constant extensions.
 -- - Extension of smaller immediates produces a 32-bit immediate for ALU.

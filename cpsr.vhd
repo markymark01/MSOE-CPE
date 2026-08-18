@@ -1,8 +1,8 @@
 -- ************************************************************************
--- Project:	LAB2			
+-- Project:	DIGIBOTPUP			
 -- Filename:	cpsr.vhd
 -- Author:	Mark Harbar 
--- Date:	 05/05/2026
+-- Date:	03/18/2026
 -- Provides:	
 -- - The ARM current program status register. 
 -- - This register stores ALU flag signals C, V, N, Z.

@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:	   LAB2		
+-- Project:		DIGIBOTPUP			
 -- Filename:	regn.vhd
 -- Author:		Mark Harbar
--- Date:			 05/05/2026
+-- Date:			4/15/2026
 -- Provides:	
 -- - An n-bit wide register.
 -- - Responds to an active-low (logic-0) asynchronous reset signal. 

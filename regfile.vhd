@@ -1,8 +1,8 @@
 -- ***************************************************************************
--- Project:		LAB2			
+-- Project:		DIGIBOTPUP			
 -- Filename:	regfile.vhd
 -- Author:		Mark Harbar 
--- Date:			05/05/2026
+-- Date:			03/04/2026
 -- Provides:	
 -- - A 16-item register file with three simultaneous output ports. 
 -- - Addresses A1, A2, and A3 identify the three register values to output. 

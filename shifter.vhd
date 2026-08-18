@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:		LAB2	
+-- Project:		DIGIBOTPUP	
 -- Filename:	shifter.vhd
 -- Author:		Mark Harbar
--- Date:			 05/05/2026
+-- Date:			03/18/2026
 -- Provides:	
 -- - A shifter for the ARMv4 ISA. 
 -- - This shifter is implemented using IEEE library numeric_std. 

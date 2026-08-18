@@ -1,8 +1,8 @@
 -- **********************************************************************
--- Project:	LAB2			
+-- Project:	DIGIBOTPUP			
 -- Filename:	alu.vhd
 -- Author:	Mark Harbar
--- Date:	 05/05/2026
+-- Date:	03/18/2026
 -- Provides:	
 -- - A 32-bit ALU responding to requests on function selection signal S.
 -- - Function result flags C, V, N, and Z are produced.

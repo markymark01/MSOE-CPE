@@ -1026,7 +1026,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 664 128 1064 576)
 	(text "TOPLEVELDESIGN" (rect 5 0 163 23)(font "Intel Clear" (font_size 8)))
-	(text "inst50" (rect 8 423 54 444)(font "Intel Clear" ))
+	(text "inst18" (rect 8 423 54 444)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
