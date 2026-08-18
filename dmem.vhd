@@ -1,8 +1,8 @@
 -- **************************************************************************
--- Project:	CPE1510 Single-cycle Processor		
+-- Project:	LAB2			
 -- Filename:	dmem.vhd
 -- Author:	Mark Harbar
--- Date:	03/18/2026
+-- Date:	 05/05/2026
 -- Provides:	
 -- - This is a 32-location RAM memory of 32-bit words.
 -- - It has active-low memory write storing input data WD to address A.

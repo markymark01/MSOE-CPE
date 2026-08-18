@@ -1,8 +1,8 @@
 -- **********************************************************************
--- Project:	CPE1510 Single-cycle Processor		
+-- Project:	LAB2			
 -- Filename:	alu.vhd
 -- Author:	Mark Harbar
--- Date:	03/18/2026
+-- Date:	 05/05/2026
 -- Provides:	
 -- - A 32-bit ALU responding to requests on function selection signal S.
 -- - Function result flags C, V, N, and Z are produced.
@@ -78,7 +78,7 @@ begin
 	  not INTB when B"1111", 				  -- mvn		
 	
 	
-	  to_unsigned(16#ABC#, 33) when others;	--(quartus doesnt like 33X"ABC" [i couldnt find compiler settings so I looked up how old quartus wants it] so I changed it to be the hex ABC as a 33 bit unsigned value)
+	  33X"ABC" when others;	--(quartus doesnt like 33X"ABC" [i couldnt find compiler settings so I looked up how old quartus wants it] so I changed it to be the hex ABC as a 33 bit unsigned value)
 
 	  -- error code for debugging
 			 		 

@@ -1,8 +1,8 @@
 -- ************************************************************************
--- Project:		CPE1510 Single-cycle Processor		
+-- Project:		LAB2			
 -- Filename:	rotator.vhd
 -- Author:		Mark Harbar
--- Date:			03/18/2026
+-- Date:			05/05/2026
 -- Provides:	
 -- - Rotates the immediate NUM right in two-bit rotation increments. 
 -- - The number of rotations is specified on the ROT input. 

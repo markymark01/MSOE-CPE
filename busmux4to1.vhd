@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:	CPE1510 Single-cycle Processor		
+-- Project:	LAB2			
 -- Filename:	busmux4to1.vhd
 -- Author:	Mark Harbar
--- Date:	01/18/2026
+-- Date:	 05/05/2026
 -- Provides:	
 -- - a multiplexer that passes one of the selected busses to the output
 -- - uses with-select syntax to implement the multiplexer

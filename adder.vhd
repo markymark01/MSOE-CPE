@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:	CPE1510 Single-cycle Processor		
+-- Project:	LAB2			
 -- Filename:	adder.vhd
 -- Author:	Mark Harbar 
--- Date:	3/4/2026
+-- Date:	05/05/2026
 -- Provides:	
 -- - A 32-bit adder that drops the carry out. 
 -- - This component uses the ieee library called numeric_std. 

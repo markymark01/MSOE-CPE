@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:		CPE1510 Single-cycle Processor		
+-- Project:		LAB2	
 -- Filename:	shifter.vhd
 -- Author:		Mark Harbar
--- Date:			03/18/2026
+-- Date:			 05/05/2026
 -- Provides:	
 -- - A shifter for the ARMv4 ISA. 
 -- - This shifter is implemented using IEEE library numeric_std. 
@@ -52,7 +52,7 @@ begin
 	
 	with SHTYPE select 
 	S_RESULT <= shift_right(S_RD2VALUE,AMOUNT) when B"10",
-	 	    to_signed(0,32)  when others; --(another error like in the alu something with quartus version probably
+	 	    32X"0" when others;  --(another error like in the alu something with quartus version probably
 					
 	with SHTYPE select
 	RD2SHIFTED <= std_logic_vector(S_RESULT) when B"10", 

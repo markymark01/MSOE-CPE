@@ -1,8 +1,8 @@
 -- ***************************************************************************
--- Project:		CPE1510 Single-cycle Processor		
+-- Project:		LAB2			
 -- Filename:	control.vhd
 -- Author:		Mark Harbar
--- Date:			03/18/2026
+-- Date:			 05/05/2026
 -- Provides:	
 -- - A control circuit for the ARMv4 ISA single-cycle processor.
 -- - Use when-else to create equations for each signal.
@@ -126,8 +126,8 @@ begin
    
 	
    -- choose rotated immediate or not
-   ROTSEL <= '1' when OPCODE=B"00" and I='1' else
-             '0';
+   ROTSEL <= '0' when OPCODE=B"00" and I='1' else
+             '1';
 
 				 
    -- choose shift amount source
@@ -137,8 +137,8 @@ begin
 					
    -- choose ALU source 2
    SRC2SEL <= '1' when OPCODE=B"00" and I='1' else
-              '1' when OPCODE=B"01" else
-              '0';
+				  '1' when OPCODE=B"01" else
+				  '0';
 
 				  
 	--active low !!!!!!!! (MESSED ME UP IN TESTING)			

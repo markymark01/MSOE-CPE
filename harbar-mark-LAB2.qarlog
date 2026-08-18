@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/CPE1510Lab2/harbar-mark-LAB2.qarlog
+
+Archive:	C:/CPE1510Lab2/harbar-mark-LAB2.qar
+Date:		Tue May 05 19:30:52 2026
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/CPE1510Lab2/LAB2.qpf
+C:/CPE1510Lab2/LAB2.qsf
+C:/CPE1510Lab2/SDC1.sdc
+C:/CPE1510Lab2/SYNCHRONIZER.bdf
+C:/CPE1510Lab2/SYSTEM.bdf
+C:/CPE1510Lab2/TOPLEVELDESIGN.bdf
+C:/CPE1510Lab2/Waveform.vwf
+C:/CPE1510Lab2/components/adder.vhd
+C:/CPE1510Lab2/components/addressdecoder.vhd
+C:/CPE1510Lab2/components/alu.vhd
+C:/CPE1510Lab2/components/busmux4to1.vhd
+C:/CPE1510Lab2/components/control.vhd
+C:/CPE1510Lab2/components/cpsr.vhd
+C:/CPE1510Lab2/components/dmem.vhd
+C:/CPE1510Lab2/components/extender.vhd
+C:/CPE1510Lab2/components/irom.vhd
+C:/CPE1510Lab2/components/reg32.vhd
+C:/CPE1510Lab2/components/regfile.vhd
+C:/CPE1510Lab2/components/regn.vhd
+C:/CPE1510Lab2/components/rotator.vhd
+C:/CPE1510Lab2/components/seg7decode.vhd
+C:/CPE1510Lab2/components/shifter.vhd
+C:/CPE1510Lab2/decode.bdf
+C:/CPE1510Lab2/execute.bdf
+C:/CPE1510Lab2/fetch.bdf
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

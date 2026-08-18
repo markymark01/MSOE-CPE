@@ -1,8 +1,8 @@
 -- *********************************************************************
--- Project:		CPE1510 Single-cycle Processor		
+-- Project:		LAB2			
 -- Filename:	reg32.vhd
 -- Author:		Mark Harbar
--- Date:			03/18/2026
+-- Date:			05/05/2026
 -- Provides:	
 -- - A 32-bit wide register used for registers not in the register file.
 -- - Responds to an active-low (logic-0) asynchronous reset signal. 
